@@ -1,0 +1,31 @@
+package com.jonny.java.test;
+
+import java.util.ArrayList;
+
+public class Main {
+	public static void main(String[] args) {
+		
+	}
+	
+	int fib (int N) {
+		if (N == 0) {
+			return 0;
+		}
+		
+		ArrayList<Integer> memo = new ArrayList<Integer>(N+1);
+		return helper(memo, N);
+	}
+	
+	int helper(ArrayList<Integer> memo,  int n ) {
+		if (n == 1 || n == 2) {
+			return 1;
+		}
+		if (memo.get(n) != 0) {
+			return memo.get(n);
+		}
+		
+		memo.set(n,  helper(memo, n - 1) + helper(memo, n - 2));
+		
+		return memo.get(n);
+	}
+}

@@ -1,0 +1,10 @@
+package com.jonny.java.algorithm;
+
+public class Fib implements Algorithm {
+
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

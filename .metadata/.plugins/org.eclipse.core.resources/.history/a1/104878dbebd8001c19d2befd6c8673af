@@ -1,0 +1,5 @@
+package com.jonny.java.test;
+
+public interface Algorithm {
+	void run();
+}
