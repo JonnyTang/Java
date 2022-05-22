@@ -2998,3 +2998,10 @@
 2022-05-21 23:53:01,650 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\02_coding\java_station\hello-world-m2e\src\main\resources
 2022-05-21 23:53:01,651 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-05-21 23:53:01,651 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\02_coding\java_station\hello-world-m2e\src\test\resources
+2022-05-22 09:52:52,655 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-05-22 09:53:16,952 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-22 09:53:16,953 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\02_coding\java_station\hello-world-m2e\src\main\resources
+2022-05-22 09:53:16,955 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-22 09:53:16,955 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\02_coding\java_station\hello-world-m2e\src\test\resources
+2022-05-22 09:54:12,982 [Worker-12: Fetching remote refs from git@github.com:JonnyTang/Java.git] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
+2022-05-22 09:54:13,138 [Worker-12: Fetching remote refs from git@github.com:JonnyTang/Java.git] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
