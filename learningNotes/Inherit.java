@@ -19,9 +19,31 @@ class Parent {
 	public void say() {
 		System.out.println("I'm Parent!");
 	}
-	
+
 	public static void dance() {
 		System.out.println("Parent dance!");
+	}
+
+	public Parent() {
+		System.out.println("This is Parent Constructor!");
+	}
+
+	// 有参构建函数
+	public Parent(String name) {
+		System.out.println("This is Parent's constructor with params！");
+		this.name = name;
+	}
+
+	public void finalize() {
+		System.out.println("这个父类正在被回收");
+	}
+	
+	public boolean equals(Object o) {
+		if (o instanceof Parent) {
+			Parent p = (Parent)o;
+			return this.name == p.name;
+		}
+		return false;
 	}
 }
 
@@ -33,9 +55,19 @@ class Child extends Parent {
 	public void say() {
 		System.out.println("I'm Child!");
 	}
-	
+
 	public static void dance() {
 		System.out.println("Child dance!");
+	}
+
+	public Child() {
+		System.out.println("This is Child constructor!");
+	}
+
+	// 有参构建函数
+	public Child(String name) {
+		super(name);
+		System.out.println("This is Child constructor with params!");
 	}
 }
 
@@ -59,7 +91,7 @@ public class Inherit {
 		// 2、对象转换
 		// 2.1 向上转换，所有子类转换成父类是可以通的
 		Parent p = new Parent();
-		Child c = new Child();
+		Child c = new Child(); // 子类实例时，父类也会实例化，其构建函数会被调用
 		p = c;
 		p.say();
 		// 2.2 向下转换，父类转换成子类，不一定，强制转换，后果自负
@@ -107,5 +139,30 @@ public class Inherit {
 		// 隐藏就是子类覆盖父类的类方法
 		Parent.dance();
 		Child.dance();
+
+		// 6. super
+		new Parent("Jonny");
+		new Child("xiaoduo");
+
+		// 7. Object类，Object类是所有类的子类。声明一个类的时候，默认是继承了Object
+		Parent dan = new Parent("xiaodan");
+		System.out.println(dan.toString());
+		// 当一个对象没有任何引用指向它的时候，它就满足垃圾回收的条件，当它被垃圾回收的时候，它的finalize()方法就会被调用
+		// finalize()是由虚拟机JVM调用的
+//		Parent h;
+//		for (int k1 = 0; k1 < 100000; k1++) {
+//            //不断生成新的对象
+//            //每创建一个对象，前一个对象，就没有引用指向了
+//            //那些对象，就满足垃圾回收的条件
+//            //当，垃圾堆积的比较多的时候，就会触发垃圾回收
+//            //一旦这个对象被回收，它的finalize()方法就会被调用
+//            h = new Parent();
+//        }
+		// equals()用于判断两个对象的内容是否相同
+		System.out.println(new Parent("jonny").equals(new Parent("xiaodan")));
+		System.out.println(new Parent("jonny").equals(new Parent("jonny")));
+		
+		// == 用于判断两个引用，是否指向了同一个对象
+		System.out.println(new Parent("xiaoduo") == new Parent("xiaoduo"));
 	}
 }
