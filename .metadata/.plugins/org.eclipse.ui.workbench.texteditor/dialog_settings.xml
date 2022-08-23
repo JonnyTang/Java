@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="public class Test {"/>
 			<item value="Hero"/>
 			<item value="currentCard"/>
 			<item value="red"/>

@@ -3,4 +3,3 @@ INDEX VERSION 1.131+D:\02_coding\java_station\.metadata\.plugins\org.eclipse.jdt
 1913309533.index
 1865797976.index
 4044537336.index
-144625918.index
